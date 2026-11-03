@@ -2059,3 +2059,31 @@
     gap: 6px 8px;
   }
 }
+
+
+/* ----- cookies: en el celular los botones ocupan todo el ancho ----- */
+@media (max-width: 600px) {
+  .cookies {
+    padding: 8px;
+  }
+
+  .cookies-caja {
+    padding: 16px;
+  }
+
+  .cookies-botones .boton {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .estadisticas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .estadistica:nth-child(odd) {
+    border-left: 0;
+  }
+  .estadistica:nth-child(n + 3) {
+    border-top: 1px solid var(--borde);
+  }
+}

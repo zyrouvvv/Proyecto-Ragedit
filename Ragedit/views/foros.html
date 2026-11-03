@@ -46,6 +46,24 @@
   <main class="principal">
     <div class="dos-columnas">
       <div class="columna-principal">
+            <section class="panel estadisticas" id="estadisticas" aria-label="Estadisticas de la comunidad">
+          <div class="estadistica">
+            <span class="estadistica-numero" id="estadistica-usuarios">-</span>
+            <span class="estadistica-nombre" data-singular="usuario" data-plural="usuarios">usuarios</span>
+          </div>
+          <div class="estadistica">
+            <span class="estadistica-numero" id="estadistica-publicaciones">-</span>
+            <span class="estadistica-nombre" data-singular="publicacion" data-plural="publicaciones">publicaciones</span>
+         </div>
+         <div class="estadistica">
+            <span class="estadistica-numero" id="estadistica-comunidades">-</span>
+            <span class="estadistica-nombre" data-singular="comunidad activa" data-plural="comunidades activas">comunidades activas</span>
+          </div>
+          <div class="estadistica">
+            <span class="estadistica-numero" id="estadistica-comentarios">-</span>
+           <span class="estadistica-nombre" data-singular="comentario" data-plural="comentarios">comentarios</span>
+          </div>
+        </section>
         <section class="panel acciones" aria-label="Acciones">
           <a class="boton boton-pastilla boton-verde boton-nueva" href="crear-publicacion.html">Nueva publicacion</a>
           <a class="boton boton-pastilla boton-gris boton-gestionar" href="gestionar-publicaciones.html">Gestionar mis publicaciones</a>
@@ -85,6 +103,7 @@
   <script src="../script/comun/datos.js"></script>
   <script src="../script/comun/sesion.js"></script>
   <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/cookies.js"></script>
   <script src="../script/comun/BackToTop.js"></script>
   <script src="../script/comun/publicaciones.js"></script>
   <script src="../script/paginas/foros.js"></script>

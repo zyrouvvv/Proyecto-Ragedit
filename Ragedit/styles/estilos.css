@@ -4039,3 +4039,140 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+
+/*  16. COOKIES (cartel de consentimiento) */
+.cookies {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.cookies-caja {
+  width: 100%;
+  max-width: 720px;
+  padding: 20px 22px;
+  pointer-events: auto;
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra-media);
+  animation: cookies-subir .3s ease;
+}
+
+@keyframes cookies-subir {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookies-caja {
+    animation: none;
+  }
+}
+
+.cookies-vista[hidden] {
+  display: none;
+}
+
+.cookies-titulo {
+  font-family: var(--fuente-interfaz);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--texto);
+}
+
+.cookies-texto {
+  margin: 8px 0 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--texto-suave);
+}
+
+.cookies-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cookies-lista {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.cookies-opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie-2);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.cookies-opcion input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  accent-color: var(--verde);
+}
+
+.cookies-opcion strong {
+  display: block;
+  font-family: var(--fuente-sans);
+  font-size: 14px;
+  color: var(--texto);
+}
+
+
+
+/*  Franja de estadisticas */
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+}
+.estadisticas[hidden] {
+  display: none;
+}
+.estadistica {
+  display: grid;
+  gap: 2px;
+  padding: 12px 16px;
+  border-left: 1px solid var(--borde);
+}
+.estadistica:first-child {
+  border-left: 0;
+}
+.estadistica-numero {
+  font-family: var(--fuente-mono);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--texto);
+}
+.estadistica-nombre {
+  font-size: 13px;
+  color: var(--texto-suave);
+}

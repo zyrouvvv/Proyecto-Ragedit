@@ -87,3 +87,29 @@ botonFiltro.addEventListener("click", function () {
 });
 
 mostrarPublicaciones();
+
+
+//  Estadisticas de la comunidad 
+
+
+var panelEstadisticas = document.getElementById("estadisticas");
+
+function ponerEstadistica(idNumero, valor) {
+  var numero = document.getElementById(idNumero);
+  numero.textContent = formatearNumero(valor);
+
+  // "1 usuario" / "2 usuarios": el nombre esta justo al lado del numero
+  var nombre = numero.nextElementSibling;
+  nombre.textContent = (valor == 1) ? nombre.getAttribute("data-singular") : nombre.getAttribute("data-plural");
+}
+
+llamarApi("estadisticas.php", { accion: "resumen" }, function (respuesta) {
+  if (respuesta.ok == false) {
+    panelEstadisticas.hidden = true;   // si falla, no mostramos numeros inventados
+    return;
+  }
+  ponerEstadistica("estadistica-usuarios", respuesta.usuarios);
+  ponerEstadistica("estadistica-publicaciones", respuesta.publicaciones);
+  ponerEstadistica("estadistica-comunidades", respuesta.comunidades);
+  ponerEstadistica("estadistica-comentarios", respuesta.comentarios);
+});
