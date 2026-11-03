@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda | Ragedit</title>
+  <meta name="description" content="Ragedit: tienda de videojuegos con foros de la comunidad.">
+  <link rel="stylesheet" href="../styles/fuentes.css">
+  <link rel="stylesheet" href="../styles/estilos.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../img/Logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <a class="logo" href="index.html" aria-label="Ragedit, ir al inicio"><img src="../img/logo pagina.png" alt="logopagina"></a>
+
+      <form class="caja-busqueda" id="formulario-buscador" role="search">
+        <label class="solo-lector" for="buscador">Buscar</label>
+        <input id="buscador" type="search" placeholder="Buscar.." autocomplete="off">
+        <button class="boton-busqueda" type="submit" aria-label="Buscar"><span class="icono icono-buscar" aria-hidden="true"></span></button>
+      </form>
+
+      <nav class="navegacion" aria-label="Principal">
+        <div class="menu">
+          <button class="menu-boton" type="button" aria-haspopup="true">
+            <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span>FOROS</span>
+          </button>
+          <ul class="menu-lista">
+            <li><a href="index.html">Tienda</a></li>
+            <li><a href="foros.html">Foros</a></li>
+            <li><a href="carrito.html"><span>Carrito</span><span class="globito contador-carrito"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="zona-usuario menu">
+        <button class="menu-boton" type="button" aria-haspopup="true" aria-label="Menu de usuario">
+          <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span class="avatar" id="avatar">?</span>
+        </button>
+        <ul class="menu-lista menu-lista-derecha" id="menu-usuario"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="principal">
+    <section class="pagina-info">
+      <h1>Ayuda</h1>
+      <h2>¿Como creo una cuenta?</h2>
+      <p>Entra a <a href="registro.html">Registrate</a>, completa tus datos y acepta los terminos. Tu contraseña debe tener al menos 8 caracteres con mayusculas, minusculas, numeros y simbolos.</p>
+      <h2>¿Como publico en los foros?</h2>
+      <p>Inicia sesion, entra a Foros y presiona “Nueva publicacion”. Desde “Gestionar mis publicaciones” podes editarlas o eliminarlas.</p>
+      <h2>¿Como compro un juego?</h2>
+      <p>En la tienda presiona “Agregar” en el juego que quieras y despues revisa tu compra en el carrito.</p>
+      <h2>¿Como contacto con soporte?</h2>
+      <p>Envia un correo a <a href="mailto:soporte@ragedit.com">soporte@ragedit.com</a></p>
+      <h2>¿Como reporto una publicacion o a un usuario?</h2>
+      <p>Para reportar una publicacion, entra a ella y presiona “Reportar” arriba a la derecha. Para reportar a un usuario, entra a su perfil y presiona “Reportar usuario”. Elegi el motivo, conta que paso si queres y envia el reporte. Un administrador lo va a revisar y tomara las medidas necesarias. Necesitas tener la sesion iniciada.</p>
+      <h2>¿Como dejo una reseña de un juego?</h2>
+      <p>Entra a la pagina del juego desde la tienda (haciendo click en su portada o en su nombre), elegi cuantas estrellas le pones, escribi tu experiencia y presiona “Publicar reseña”. Solo podes dejar una reseña por juego, pero podes editarla o eliminarla cuando quieras.</p>
+      <h2>¿Como cambio mi contraseña?</h2>
+      <p>Entra a tu perfil y presiona “Cambiar contraseña”. Ingresa tu contraseña actual y la nueva contraseña. Tu nueva contraseña debe tener al menos 8 caracteres con mayusculas, minusculas, numeros y simbolos.</p>
+      <h2>¿Como elimino mi cuenta?</h2>
+      <p>Entra a tu perfil y presiona “Eliminar cuenta”. Ingresa tu contraseña y confirma la eliminacion de tu cuenta. Esta accion es irreversible y se perderan todos tus datos.</p> 
+      <h2>¿Como cambio mi correo electronico?</h2>
+      <p>Entra a tu perfil y presiona “Cambiar correo electronico”. Ingresa tu contraseña y el nuevo correo electronico. Confirma el cambio de correo electronico. Esta accion es irreversible y se perdera el acceso a tu cuenta con el correo anterior.</p> 
+      <h2>¿Como cambio mi nombre de usuario?</h2>
+      <p>Entra a tu perfil y presiona “Cambiar nombre de usuario”. Ingresa tu contraseña y el nuevo nombre de usuario. Confirma el cambio de nombre de usuario. Esta accion es irreversible y se perdera el acceso a tu cuenta con el nombre de usuario anterior.</p> 
+      <h2>¿Como cambio mi informacion personal?</h2>
+      <p>Entra a tu perfil y presiona “Cambiar informacion personal”. Ingresa tu contraseña y la nueva informacion personal. Confirma el cambio de informacion personal. Esta accion es irreversible y se perdera el acceso a tu cuenta con la informacion personal anterior.</p> 
+<a class="boton boton-chico" href="index.html">VOLVER</a>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><img src="../img/logo pagina.png" alt=""></p>
+    <a href="acerca-de-nosotros.html">Acerca de nosotros</a>
+    <a href="ayuda.html">Ayuda</a>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">▲</button>
+  <script src="../script/comun/utiles.js"></script>
+  <script src="../script/comun/datos.js"></script>
+  <script src="../script/comun/sesion.js"></script>
+  <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/BackToTop.js"></script>
+</body>
+</html>

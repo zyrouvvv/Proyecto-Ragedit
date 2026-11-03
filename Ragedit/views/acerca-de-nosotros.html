@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acerca de nosotros | Ragedit</title>
+  <meta name="description" content="Ragedit: tienda de videojuegos con foros de la comunidad.">
+  <link rel="stylesheet" href="../styles/fuentes.css">
+  <link rel="stylesheet" href="../styles/estilos.css">
+  <link rel="stylesheet" href="../styles/adaptable.css">
+  <link rel="icon" href="../img/Logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <a class="logo" href="index.html" aria-label="Ragedit, ir al inicio"><img src="../img/logo pagina.png" alt="logopagina"></a>
+
+      <form class="caja-busqueda" id="formulario-buscador" role="search">
+        <label class="solo-lector" for="buscador">Buscar</label>
+        <input id="buscador" type="search" placeholder="Buscar.." autocomplete="off">
+        <button class="boton-busqueda" type="submit" aria-label="Buscar"><span class="icono icono-buscar" aria-hidden="true"></span></button>
+      </form>
+
+      <nav class="navegacion" aria-label="Principal">
+        <div class="menu">
+          <button class="menu-boton" type="button" aria-haspopup="true">
+            <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span>FOROS</span>
+          </button>
+          <ul class="menu-lista">
+            <li><a href="index.html">Tienda</a></li>
+            <li><a href="foros.html">Foros</a></li>
+            <li><a href="carrito.html"><span>Carrito</span><span class="globito contador-carrito"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="zona-usuario menu">
+        <button class="menu-boton" type="button" aria-haspopup="true" aria-label="Menu de usuario">
+          <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span class="avatar" id="avatar">?</span>
+        </button>
+        <ul class="menu-lista menu-lista-derecha" id="menu-usuario"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="principal">
+    <section class="pagina-info">
+      <h1>Acerca de nosotros</h1>
+      <p>@Ragedit es una tienda de videojuegos con foros donde la comunidad comparte noticias, filtraciones y opiniones sobre sus juegos favoritos.</p>
+
+      <h2>Quienes somos</h2>
+      <p>Somos un equipo de estudiantes que desarrolla Ragedit como proyecto integrador. Trabajamos por etapas (sprints) y cada semana sumamos funciones nuevas al sitio.</p>
+
+      <h2>Nuestra mision</h2>
+      <p>Reunir en un solo lugar la compra de videojuegos y la conversacion de la comunidad: que puedas encontrar tu proximo juego y, al mismo tiempo, charlar sobre el con otras personas que lo juegan.</p>
+
+      <h2>Que podes hacer</h2>
+      <ul>
+        <li>Buscar juegos por nombre o categoria, comprarlos desde la tienda y armar tu carrito.</li>
+        <li>Crear, editar y gestionar tus publicaciones en los foros.</li>
+        <li>Comentar, votar y repostear lo que publica la comunidad.</li>
+        <li>Armar tu perfil con foto, descripcion y estado.</li>
+      </ul>
+
+      <h2>Como esta hecho</h2>
+      <ul>
+        <li>HTML, CSS y JavaScript para lo que ves y tocas en el navegador.</li>
+        <li>PHP para la logica del servidor: sesiones, roles, validaciones y subida de imagenes.</li>
+        <li>MySQL para guardar usuarios, juegos, publicaciones, comentarios y carritos.</li>
+      </ul>
+
+      <h2 id="equipo">Nuestro equipo</h2>
+      <p>Hace clic en el nombre de cada integrante para conocerlo.</p>
+      <ul class="equipo" id="lista-equipo"></ul>
+
+      <a class="boton boton-chico" href="index.html">VOLVER</a>
+    </section>
+  </main>
+
+ <footer class="pie">
+    <p><img src="../img/logo pagina.png" alt=""></p>
+    <a href="acerca-de-nosotros.html">Acerca de nosotros</a>
+    <a href="ayuda.html">Ayuda</a>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">▲</button>
+  <script src="../script/comun/utiles.js"></script>
+  <script src="../script/comun/datos.js"></script>
+  <script src="../script/comun/sesion.js"></script>
+  <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/BackToTop.js"></script>
+  <script src="../script/paginas/acerca.js"></script>
+</body>
+</html>

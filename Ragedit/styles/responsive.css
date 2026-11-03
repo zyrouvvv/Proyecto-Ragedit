@@ -1,0 +1,506 @@
+@media (max-width: 1200px) {
+  .encabezado-interno {
+    padding: 12px 20px;
+    gap: 12px 0;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex: 0 0 auto;
+    margin-right: 32px;
+  }
+
+  .caja-busqueda {
+    flex: 1 1 240px;
+    max-width: 326px;
+    margin-right: 58px;
+  }
+
+  .navegacion {
+    margin-left: 8px;
+  }
+
+  .pie {
+    padding-left: 80px;
+  }
+
+  .principal {
+    padding: 32px 20px 60px;
+  }
+}
+
+/* ---- tablet ---- */
+@media (max-width: 960px) {
+  .dos-columnas,
+  .carrito {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .columna-principal {
+    gap: 24px;
+  }
+
+  .comunidades {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+
+  .comunidad {
+    height: 170px;
+  }
+
+  .panel-comentarios {
+    min-height: 0;
+  }
+
+  .editor,
+  .publi,
+  .gestion {
+    margin-left: 0;
+  }
+
+  .editor-cuerpo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .editor-imagen {
+    margin: 0 0 16px;
+    order: -1;
+  }
+
+  .perfil-cabecera {
+    gap: 28px;
+    padding: 20px;
+  }
+
+  .perfil-cabecera-avatar {
+    width: 150px;
+    height: 150px;
+    font-size: 60px;
+  }
+
+  .acceso {
+    padding: 28px 28px 24px;
+  }
+
+  .acceso-titulo {
+    font-size: 48px;
+  }
+
+  .acceso-cambio {
+    margin-left: 0;
+  }
+
+  .carrusel-diapositiva {
+    padding: 28px 40px 60px;
+    min-height: 300px;
+  }
+
+  .pie {
+    padding-left: 40px;
+  }
+}
+
+/* ---- celular ---- */
+@media (max-width: 640px) {
+  .principal {
+    padding: 20px 12px 40px;
+  }
+
+  .encabezado-interno {
+    padding: 10px 12px;
+    min-height: 0;
+  }
+
+  .logo {
+    order: 1;
+    font-size: 22px;
+    margin-right: 0;
+    flex: 1 1 auto;
+  }
+
+  .zona-usuario {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .avatar {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+
+  .zona-usuario .triangulo {
+    width: 20px;
+    height: 15px;
+  }
+
+  .caja-busqueda {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: none;
+    margin: 0 46px 0 0;
+    height: 32px;
+  }
+
+  .caja-busqueda input {
+    font-size: 16px;
+  }
+
+  .boton-busqueda {
+    top: -1px;
+    left: calc(100% + 6px);
+  }
+
+  .navegacion {
+    order: 4;
+    margin-left: 0;
+    flex: 1 1 100%;
+  }
+
+  .menu-boton {
+    font-size: 24px;
+  }
+
+  .navegacion .triangulo {
+    width: 22px;
+    height: 16px;
+  }
+
+  .menu-lista {
+    min-width: 200px;
+  }
+
+  .pie {
+    padding: 28px 20px 20px;
+    font-size: 17px;
+    min-height: 0;
+  }
+
+  .acciones {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .acciones .boton {
+    font-size: 19px;
+    width: 100%;
+  }
+
+  .panel-lista {
+    padding: 8px;
+  }
+
+  .pestania {
+    font-size: 15px;
+    padding: 0 9px;
+  }
+
+  .pestanias {
+    gap: 8px;
+  }
+
+  .fila {
+    grid-template-columns: 48px minmax(0, 1fr) auto auto auto;
+    padding: 6px 8px 6px 6px;
+    row-gap: 2px;
+    min-height: 0;
+  }
+
+  .fila-miniatura {
+    width: 44px;
+    height: 44px;
+    grid-row: 1 / span 2;
+  }
+
+  .fila-info {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    padding-left: 8px;
+  }
+
+  .fila-titulo {
+    font-size: 17px;
+  }
+
+  .fila-juego {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .fila-dato {
+    grid-row: 2;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 8px;
+  }
+
+  .fila-etiquetada .fila-miniatura {
+    grid-row: 2 / span 2;
+  }
+
+  .fila-etiquetada .fila-info {
+    grid-row: 2;
+  }
+
+  .fila-etiquetada .fila-dato {
+    grid-row: 3;
+    font-size: 16px;
+  }
+
+  .fila-etiquetada .fila-titulo {
+    font-size: 17px;
+  }
+
+  .comunidad {
+    height: 150px;
+  }
+
+  .comunidad-nombre {
+    font-size: 20px;
+  }
+
+  .acceso {
+    padding: 22px 16px 20px;
+  }
+
+  .acceso-titulo {
+    font-size: 36px;
+  }
+
+  .campo-etiqueta {
+    font-size: 22px;
+  }
+
+  .campo-entrada {
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .campo-ayuda {
+    font-size: 15px;
+  }
+
+  .campo-ayuda-chica {
+    font-size: 14px;
+  }
+
+  .casilla {
+    font-size: 17px;
+  }
+
+  .desplegable-genero {
+    margin-left: 8px;
+    width: 170px;
+  }
+
+  .acceso .boton-enviar {
+    width: 100%;
+  }
+
+  .rapido {
+    width: 76px;
+    height: 76px;
+  }
+
+  .tienda-cabecera {
+    padding: 14px;
+  }
+
+  .tienda-titulo {
+    font-size: 22px;
+  }
+
+  .tienda-cabecera .boton {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .carrusel-diapositiva {
+    padding: 22px 20px 56px;
+    min-height: 260px;
+  }
+
+  .carrusel-flecha {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .carrusel-precio {
+    font-size: 20px;
+  }
+
+  .grilla {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .perfil-cabecera {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil-cabecera-nombre {
+    font-size: 30px;
+  }
+
+  .perfil-cabecera-bio {
+    text-align: left;
+    padding-left: 14px;
+    font-size: 17px;
+  }
+
+  .perfil-cabecera-union {
+    padding-left: 0;
+  }
+
+  .perfil-lista {
+    padding: 12px 8px;
+    min-height: 0;
+  }
+
+  .panel-comentarios {
+    padding: 14px;
+  }
+
+  .editor-barra {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .editor-barra-titulo {
+    font-size: 21px;
+  }
+
+  .editor-cuerpo {
+    padding: 8px 12px 0;
+    min-height: 0;
+  }
+
+  .editor-titulo {
+    font-size: 28px;
+    height: 46px;
+  }
+
+  .editor-subtitulo {
+    font-size: 19px;
+  }
+
+  .editor-texto {
+    min-height: 260px;
+  }
+
+  .boton-publicar {
+    font-size: 22px;
+  }
+
+  .publi-principal {
+    padding: 4px 12px 24px 12px;
+    margin-left: 4px;
+  }
+
+  .publi-subtitulo {
+    font-size: 19px;
+  }
+
+  .publi-comentarios {
+    margin-left: 4px;
+    padding: 14px 10px 16px 8px;
+  }
+
+  .publi-comentarios .hilo > li {
+    padding-left: 50px;
+  }
+
+  .avatar-chico {
+    left: 10px;
+  }
+
+  .publi-acciones {
+    padding: 12px;
+  }
+
+  .publi-acciones .entrada-comentario {
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .votos {
+    margin-left: 0;
+    gap: 14px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .voto {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .gestion-cuerpo {
+    padding: 10px 8px 16px 4px;
+    min-height: 300px;
+  }
+
+  .gestion-grilla {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fila-carrito {
+    grid-template-columns: 72px minmax(0, 1fr) 34px;
+    padding: 8px;
+    gap: 8px 12px;
+  }
+
+  .fila-carrito-portada {
+    width: 72px;
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .fila-carrito-nombre {
+    font-size: 17px;
+  }
+
+  .fila-carrito .cantidad {
+    grid-column: 2;
+    grid-row: 2;
+    width: max-content;
+  }
+
+  .fila-carrito-subtotal {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .fila-carrito-borrar {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .carrito-barra {
+    padding: 12px;
+  }
+}
+
+/* ---------- Agregados del sprint 3 ---------- */
+@media (max-width: 700px) {
+  .pagina-info .equipo {
+    grid-template-columns: 1fr;
+  }
+
+  .integrante-cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .integrante-foto {
+    width: 110px;
+    height: 110px;
+  }
+
+  .integrante-inicial {
+    font-size: 48px;
+  }
+}

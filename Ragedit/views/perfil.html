@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil | Ragedit</title>
+  <meta name="description" content="Ragedit: tienda de videojuegos con foros de la comunidad.">
+  <link rel="stylesheet" href="../styles/fuentes.css">
+  <link rel="stylesheet" href="../styles/estilos.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../img/Logo.ico" type="image/x-icon">  
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <a class="logo" href="index.html" aria-label="Ragedit, ir al inicio"><img src="../img/logo pagina.png" alt="logopagina"></a>
+
+      <form class="caja-busqueda" id="formulario-buscador" role="search">
+        <label class="solo-lector" for="buscador">Buscar</label>
+        <input id="buscador" type="search" placeholder="Buscar.." autocomplete="off">
+        <button class="boton-busqueda" type="submit" aria-label="Buscar"><span class="icono icono-buscar" aria-hidden="true"></span></button>
+      </form>
+
+      <nav class="navegacion" aria-label="Principal">
+        <div class="menu">
+          <button class="menu-boton" type="button" aria-haspopup="true">
+            <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span>FOROS</span>
+          </button>
+          <ul class="menu-lista">
+            <li><a href="index.html">Tienda</a></li>
+            <li><a href="foros.html">Foros</a></li>
+            <li><a href="carrito.html"><span>Carrito</span><span class="globito contador-carrito"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="zona-usuario menu">
+        <button class="menu-boton" type="button" aria-haspopup="true" aria-label="Menu de usuario">
+          <span class="triangulo triangulo-arriba" aria-hidden="true"></span><span class="avatar" id="avatar">?</span>
+        </button>
+        <ul class="menu-lista menu-lista-derecha" id="menu-usuario"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="principal">
+    <div class="dos-columnas">
+      <div class="columna-principal">
+        <section class="panel perfil-cabecera" id="cabecera-perfil" aria-label="Datos del usuario">
+          <div class="perfil-cabecera-avatar" id="perfil-avatar" aria-hidden="true"></div>
+          <div>
+            <h1 class="perfil-cabecera-nombre" id="perfil-nombre"></h1>
+            <p class="perfil-cabecera-bio" id="perfil-bio"></p>
+            <p class="perfil-cabecera-union" id="perfil-union"></p>
+            <a class="boton boton-pastilla boton-gris perfil-cabecera-editar" id="perfil-editar" href="editar-perfil.html" hidden>Editar perfil</a>
+            <button class="boton boton-reportar perfil-cabecera-reportar" id="perfil-reportar" type="button" hidden>REPORTAR USUARIO</button>
+          </div>
+        </section>
+        <section class="panel perfil-lista" aria-label="Publicaciones del usuario">
+          <div class="filas" id="filas-perfil"></div>
+        </section>
+      </div>
+
+      <aside class="panel panel-comentarios" aria-labelledby="titulo-comentarios">
+        <h2 class="panel-comentarios-titulo" id="titulo-comentarios">COMENTARIOS</h2>
+        <ul class="hilo" id="comentarios-perfil"></ul>
+        <form class="caja-comentar" id="formulario-comentario-perfil">
+          <label class="solo-lector" for="texto-comentario-perfil">Escribi un comentario</label>
+          <textarea id="texto-comentario-perfil" rows="3" maxlength="300" placeholder="Comentar..."></textarea>
+          <button class="boton" type="submit">ENVIAR</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p><img src="../img/logo pagina.png" alt=""></p>
+    <a href="acerca-de-nosotros.html">Acerca de nosotros</a>
+    <a href="ayuda.html">Ayuda</a>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">▲</button>
+  <script src="../script/comun/utiles.js"></script>
+  <script src="../script/comun/datos.js"></script>
+  <script src="../script/comun/sesion.js"></script>
+  <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/BackToTop.js"></script>
+  <script src="../script/comun/publicaciones.js"></script>
+  <script src="../script/paginas/perfil.js"></script>
+  <script src="../script/comun/reportes.js"></script>
+</body>
+</html>

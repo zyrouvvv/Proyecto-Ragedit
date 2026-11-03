@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestionar videojuegos | Ragedit</title>
+  <meta name="description" content="Ragedit: tienda de videojuegos con foros de la comunidad.">
+  <link rel="stylesheet" href="../styles/fuentes.css">
+  <link rel="stylesheet" href="../styles/estilos.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../img/Logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <a class="logo" href="index.html" aria-label="Ragedit, ir al inicio"><img src="../img/logo pagina.png" alt="logopagina"></a>
+
+      <form class="caja-busqueda" id="formulario-buscador" role="search">
+        <label class="solo-lector" for="buscador">Buscar</label>
+        <input id="buscador" type="search" placeholder="Buscar.." autocomplete="off">
+        <button class="boton-busqueda" type="submit" aria-label="Buscar"><span class="icono icono-buscar" aria-hidden="true"></span></button>
+      </form>
+
+      <nav class="navegacion" aria-label="Principal">
+        <div class="menu">
+          <button class="menu-boton" type="button" aria-haspopup="true">
+            <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span>FOROS</span>
+          </button>
+          <ul class="menu-lista">
+            <li><a href="index.html">Tienda</a></li>
+            <li><a href="foros.html">Foros</a></li>
+            <li><a href="carrito.html"><span>Carrito</span><span class="globito contador-carrito"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="zona-usuario menu">
+        <button class="menu-boton" type="button" aria-haspopup="true" aria-label="Menu de usuario">
+          <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span class="avatar" id="avatar">?</span>
+        </button>
+        <ul class="menu-lista menu-lista-derecha" id="menu-usuario"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="principal">
+    <section class="editor panel-admin" aria-labelledby="titulo-juegos">
+      <div class="editor-barra">
+        <h1 class="editor-barra-titulo" id="titulo-juegos">GESTIONAR VIDEOJUEGOS</h1>
+        <div class="tabla-acciones">
+          <a class="boton boton-pastilla boton-verde" href="formulario-videojuego.html">+ NUEVO VIDEOJUEGO</a>
+          <a class="boton boton-pastilla boton-gris" href="panel.html">PANEL</a>
+        </div>
+      </div>
+
+      <div class="panel-admin-cuerpo">
+        <p class="estado" id="mensaje" role="status" hidden></p>
+
+        <form class="filtros-admin" id="formulario-filtros" role="search">
+          <input class="campo-entrada" id="buscar-juego" type="search" placeholder="Buscar por nombre o categoria..." maxlength="100" aria-label="Buscar videojuegos">
+          <select class="desplegable desplegable-panel" id="filtro-categoria" aria-label="Filtrar por categoria">
+            <option value="">Todas las categorias</option>
+          </select>
+          <button class="boton boton-pastilla boton-verde" type="submit">BUSCAR</button>
+          <button class="boton boton-pastilla boton-gris" id="boton-limpiar" type="button" hidden>LIMPIAR</button>
+        </form>
+
+        <div class="tabla-contenedor">
+          <table class="tabla-usuarios">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Precio</th>
+                <th>Destacado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-juegos"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><img src="../img/logo pagina.png" alt=""></p>
+    <a href="acerca-de-nosotros.html">Acerca de nosotros</a>
+    <a href="ayuda.html">Ayuda</a>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">▲</button>
+  <script src="../script/comun/utiles.js"></script>
+  <script src="../script/comun/datos.js"></script>
+  <script src="../script/comun/sesion.js"></script>
+  <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/BackToTop.js"></script>
+  <script src="../script/paginas/gestionar-videojuegos.js"></script>
+</body>
+</html>

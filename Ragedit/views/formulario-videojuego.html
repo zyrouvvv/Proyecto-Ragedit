@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuevo videojuego | Ragedit</title>
+  <meta name="description" content="Ragedit: tienda de videojuegos con foros de la comunidad.">
+  <link rel="stylesheet" href="../styles/fuentes.css">
+  <link rel="stylesheet" href="../styles/estilos.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../img/Logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <a class="logo" href="index.html" aria-label="Ragedit, ir al inicio"><img src="../img/logo pagina.png" alt="logopagina"></a>
+
+      <form class="caja-busqueda" id="formulario-buscador" role="search">
+        <label class="solo-lector" for="buscador">Buscar</label>
+        <input id="buscador" type="search" placeholder="Buscar.." autocomplete="off">
+        <button class="boton-busqueda" type="submit" aria-label="Buscar"><span class="icono icono-buscar" aria-hidden="true"></span></button>
+      </form>
+
+      <nav class="navegacion" aria-label="Principal">
+        <div class="menu">
+          <button class="menu-boton" type="button" aria-haspopup="true">
+            <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span>FOROS</span>
+          </button>
+          <ul class="menu-lista">
+            <li><a href="index.html">Tienda</a></li>
+            <li><a href="foros.html">Foros</a></li>
+            <li><a href="carrito.html"><span>Carrito</span><span class="globito contador-carrito"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="zona-usuario menu">
+        <button class="menu-boton" type="button" aria-haspopup="true" aria-label="Menu de usuario">
+          <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span class="avatar" id="avatar">?</span>
+        </button>
+        <ul class="menu-lista menu-lista-derecha" id="menu-usuario"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="principal">
+    <section class="acceso" aria-labelledby="titulo-pagina">
+      <h1 class="acceso-titulo" id="titulo-pagina">NUEVO VIDEOJUEGO</h1>
+      <p class="estado" id="mensaje" role="status" hidden></p>
+
+      <form id="formulario-juego" novalidate>
+        <div class="campo">
+          <label class="campo-etiqueta" for="nombre">Nombre</label>
+          <input class="campo-entrada" id="nombre" type="text" maxlength="80" required>
+          <p class="campo-error" id="error-nombre"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="categoria">Categoria</label>
+          <input class="campo-entrada" id="categoria" type="text" maxlength="30" list="categorias-existentes" placeholder="Accion, RPG, Shooter..." required>
+          <datalist id="categorias-existentes"></datalist>
+          <p class="campo-error" id="error-categoria"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="precio">Precio (US$)</label>
+          <input class="campo-entrada" id="precio" type="text" inputmode="decimal" maxlength="7" placeholder="29.99" required>
+          <p class="campo-error" id="error-precio"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="desarrollador">Desarrollador (opcional)</label>
+          <input class="campo-entrada" id="desarrollador" type="text" maxlength="80" placeholder="Rockstar Games">
+          <p class="campo-error" id="error-desarrollador"></p>
+        </div>        
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="lanzamiento">Lanzamiento (opcional)</label>
+          <input class="campo-entrada" id="lanzamiento" type="text" maxlength="20" placeholder="2013">
+          <p class="campo-error" id="error-lanzamiento"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="plataformas">Plataformas (opcional)</label>
+          <input class="campo-entrada" id="plataformas" type="text" maxlength="80" placeholder="PC · PS5 · XBOX">
+          <p class="campo-error" id="error-plataformas"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="descripcion">Descripcion (opcional)</label>
+          <textarea class="campo-entrada campo-texto" id="descripcion" maxlength="1000" rows="4" placeholder="De que trata el juego..."></textarea>
+          <p class="campo-ayuda campo-ayuda-chica">Es el texto que se ve en la pagina de informacion del juego.</p>
+          <p class="campo-error" id="error-descripcion"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="destacado">Texto destacado (opcional)</label>
+          <input class="campo-entrada" id="destacado" type="text" maxlength="60">
+          <p class="campo-ayuda campo-ayuda-chica">Si escribis algo aca, el juego aparece en el carrusel de la tienda con ese texto.</p>
+          <p class="campo-error" id="error-destacado"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="fondo">Color de fondo</label>
+          <input class="campo-color" id="fondo" type="color" value="#333333">
+          <p class="campo-ayuda campo-ayuda-chica">Se usa cuando el juego no tiene imagen.</p>
+          <p class="campo-error" id="error-fondo"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="imagen">Imagen (opcional)</label>
+          <input class="campo-entrada campo-archivo" id="imagen" type="file" accept="image/jpeg,image/png,image/gif,image/webp">
+          <p class="campo-ayuda campo-ayuda-chica">JPG, PNG, GIF o WEBP de hasta 2 MB. Se ve mejor una imagen horizontal.</p>
+          <img class="vista-juego" id="vista-juego" alt="Vista previa de la imagen" hidden>
+          <label class="campo-ayuda campo-ayuda-chica" id="caja-quitar-imagen" hidden><input type="checkbox" id="quitar-imagen"> Quitar la imagen actual</label>
+          <p class="campo-error" id="error-imagen"></p>
+        </div>
+
+        <button class="boton boton-enviar" id="boton-guardar" type="submit">CREAR</button>
+      </form>
+
+      <div class="acceso-cambio">
+        <a class="enlace" href="gestionar-videojuegos.html">VOLVER A LA LISTA</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><img src="../img/logo pagina.png" alt=""></p>
+    <a href="acerca-de-nosotros.html">Acerca de nosotros</a>
+    <a href="ayuda.html">Ayuda</a>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">▲</button>
+  <script src="../script/comun/utiles.js"></script>
+  <script src="../script/comun/datos.js"></script>
+  <script src="../script/comun/sesion.js"></script>
+  <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/BackToTop.js"></script>
+  <script src="../script/paginas/formulario-videojuego.js"></script>
+</body>
+</html>

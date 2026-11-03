@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuevo usuario | Ragedit</title>
+  <meta name="description" content="Ragedit: tienda de videojuegos con foros de la comunidad.">
+  <link rel="stylesheet" href="../styles/fuentes.css">
+  <link rel="stylesheet" href="../styles/estilos.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../img/Logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <a class="logo" href="index.html" aria-label="Ragedit, ir al inicio"><img src="../img/logo pagina.png" alt="logopagina"></a>
+
+      <form class="caja-busqueda" id="formulario-buscador" role="search">
+        <label class="solo-lector" for="buscador">Buscar</label>
+        <input id="buscador" type="search" placeholder="Buscar.." autocomplete="off">
+        <button class="boton-busqueda" type="submit" aria-label="Buscar"><span class="icono icono-buscar" aria-hidden="true"></span></button>
+      </form>
+
+      <nav class="navegacion" aria-label="Principal">
+        <div class="menu">
+          <button class="menu-boton" type="button" aria-haspopup="true">
+            <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span>FOROS</span>
+          </button>
+          <ul class="menu-lista">
+            <li><a href="index.html">Tienda</a></li>
+            <li><a href="foros.html">Foros</a></li>
+            <li><a href="carrito.html"><span>Carrito</span><span class="globito contador-carrito"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="zona-usuario menu">
+        <button class="menu-boton" type="button" aria-haspopup="true" aria-label="Menu de usuario">
+          <span class="triangulo triangulo-abajo" aria-hidden="true"></span><span class="avatar" id="avatar">?</span>
+        </button>
+        <ul class="menu-lista menu-lista-derecha" id="menu-usuario"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="principal">
+    <section class="acceso" aria-labelledby="titulo-pagina">
+      <h1 class="acceso-titulo" id="titulo-pagina">NUEVO USUARIO</h1>
+      <p class="estado" id="mensaje" role="status" hidden></p>
+
+      <form id="formulario-usuario" novalidate>
+        <div class="campo">
+          <label class="campo-etiqueta" for="usuario">Nombre de usuario</label>
+          <input class="campo-entrada" id="usuario" type="text" maxlength="25" autocomplete="off" required>
+          <p class="campo-error" id="error-usuario"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="correo">Correo</label>
+          <input class="campo-entrada" id="correo" type="email" maxlength="100" autocomplete="off" required>
+          <p class="campo-error" id="error-correo"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="genero">Genero</label>
+          <select class="desplegable desplegable-panel" id="genero" required>
+            <option value="">Selecciona una opcion</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Prefiero no decirlo.">Prefiero no decirlo.</option>
+          </select>
+          <p class="campo-error" id="error-genero"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="clave">Contraseña</label>
+          <input class="campo-entrada" id="clave" type="password" autocomplete="new-password" required>
+          <p class="campo-ayuda campo-ayuda-chica">Minimo 8 caracteres con mayusculas, minusculas, numeros y simbolos.</p>
+          <p class="campo-error" id="error-clave"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="clave2">Repetir contraseña</label>
+          <input class="campo-entrada" id="clave2" type="password" autocomplete="new-password" required>
+          <p class="campo-error" id="error-clave2"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="estado">Estado</label>
+          <select class="desplegable desplegable-panel" id="estado">
+            <option value="Activo" selected>Activo</option>
+            <option value="Ocupado">Ocupado</option>
+            <option value="Ausente">Ausente</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+          <p class="campo-error" id="error-estado"></p>
+        </div>
+
+        <div class="campo">
+          <label class="campo-etiqueta" for="rol">Rol</label>
+          <select class="desplegable desplegable-panel" id="rol">
+            <option value="usuario" selected>usuario</option>
+            <option value="admin">admin</option>
+          </select>
+          <p class="campo-error" id="error-rol"></p>
+        </div>
+
+        <button class="boton boton-enviar" type="submit">CREAR</button>
+      </form>
+
+      <div class="acceso-cambio">
+        <a class="enlace" href="panel.html">VOLVER AL PANEL</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><img src="../img/logo pagina.png" alt=""></p>
+    <a href="acerca-de-nosotros.html">Acerca de nosotros</a>
+    <a href="ayuda.html">Ayuda</a>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">▲</button>
+  <script src="../script/comun/utiles.js"></script>
+  <script src="../script/comun/datos.js"></script>
+  <script src="../script/comun/sesion.js"></script>
+  <script src="../script/comun/header.js"></script>
+  <script src="../script/comun/BackToTop.js"></script>
+  <script src="../script/paginas/crear-usuario.js"></script>
+</body>
+</html>
