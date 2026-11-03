@@ -32,29 +32,66 @@
     height: 40px;
   }
 
-  /* ----- footer: logo a la izquierda y los enlaces uno abajo del otro ----- */
-  .pie {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    justify-items: start;
-    gap: 6px 48px;
-    padding: 28px 24px;
-    margin-top: 16px;
-  }
+  
+/* ==========================================
+   FOOTER RESPONSIVE
+========================================== */
 
-  .pie p {
-    grid-row: 1 / span 2;
-    grid-column: 1;
-  }
+/* TABLETS */
+@media (max-width: 900px) {
 
-  .pie a {
-    grid-column: 2;
-  }
+    .pie {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 45px 35px 20px;
+    }
 
-  .pie img {
-    width: 96px;
-  }
+    .pie-marca {
+        max-width: 100%;
+    }
+
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    .pie {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+        padding: 35px 22px 20px;
+    }
+
+    .pie-logo h2 {
+        font-size: 19px;
+    }
+
+    .pie-marca {
+        grid-column: 1 / -1;
+    }
+
+    .pie-inferior {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        line-height: 1.7;
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 380px) {
+
+    .pie {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .pie-marca {
+        grid-column: auto;
+    }
+
+}
+
 
   /* ----- tienda: grilla de 4 columnas ----- */
   .tienda {
@@ -545,16 +582,7 @@
     min-width: 200px;
   }
 
-  /* ----- footer ----- */
-  .pie {
-    gap: 4px 28px;
-    padding: 24px 12px;
-    font-size: 15px;
-  }
-
-  .pie img {
-    width: 72px;
-  }
+  
 
   /* ----- tienda: 2 columnas de ~168 px ----- */
   .tienda {
