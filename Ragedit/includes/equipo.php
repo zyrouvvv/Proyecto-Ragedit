@@ -10,15 +10,16 @@ return [
         'foto'      => '../img/Fabian.jpg',
         'enlaces'   => ['GitHub' => 'https://github.com/zyrouvvv', 'LinkedIn' => 'https://www.linkedin.com/in/fabian-diaz-34029a408/'],
     ],
-    2 => [
+2 => [
         'nombre'    => 'Virginia Videla',
-        'rol'       => 'Base de Datos',
-        'resumen'   => 'Paginas, JavaScript y experiencia de uso.',
-        'sobre_mi'  => "",
-        'intereses' => ['MySQL', 'Diseño de interfaces'],
+        'rol'       => 'Administradora de Base de Datos y Diseñadora Web',
+        'resumen'   => 'Base de datos, maquetación CSS y soporte en HTML.',
+        'sobre_mi'  => 'Me enfoqué en el diseño e implementación de la base de datos para garantizar una estructura eficiente, además del estilizado web mediante CSS y pequeños aportes en la maquetación HTML.',
+        'intereses' => ['MySQL', 'Bases de Datos', 'CSS', 'Diseño Web'],
         'foto'      => '',
-        'enlaces'   => ['GitHub' => '', 'LinkedIn' => ''],
+        'enlaces'   => ['GitHub' => 'https://github.com/videlavirginia08-spec', 'LinkedIn' => 'https://linkedin.com'],
     ],
+    
 3 => [
         'nombre'    => 'Luciano Castro Rico',
         'rol'       => 'Desarrollo Front End',
@@ -31,11 +32,11 @@ return [
     4 => [  
         'nombre'    => 'Benjamin Chaile',
         'rol'       => 'Desarrollo Back End',
-        'resumen'   => 'Catalogo de juegos, carrito y estilos.',
-        'sobre_mi'  => "",
-        'intereses' => ['Diseño visual', 'Juegos de aventura'],
-        'foto'      => 'Ragedit/img/sebasfoto.png',
-        'enlaces'   => ['GitHub' => '', 'LinkedIn' => ''],
+        'resumen'   => 'Crud de usuarios, boton back to top, Inicio de sesion de usuarios, diseño de las partes funcionales con css.',
+        'sobre_mi'  => "Me enfoque en el desarrollo backend del proyecto Ragedit, me encargue de realizar programación en Java script, HTML y Php.",
+        'intereses' => ['Logica de la pagina', 'Desarrolo de las partes funcionales de la misma' ],
+        'foto'      => 'ftB.png',
+        'enlaces'   => ['GitHub' => 'https://github.com/benjaminsrt09-ai', 'LinkedIn' => 'https://linkedin.com'],
     ],
     5 => [
         'nombre'    => 'Sebastian Guerrero',
@@ -44,6 +45,6 @@ return [
         'sobre_mi'  => "soy un programador en proceso",
         'intereses' => ['Diseño visual', 'Juegos de aventura'],
         'foto'      => '../img/sebasfoto.png',
-        'enlaces'   => ['GitHub' => '', 'LinkedIn' => ''],
+        'enlaces'   => ['GitHub' => 'https://github.com/rugbyaguilaoso3-cell', 'LinkedIn' => 'https://linkedin.com'],
     ],
 ];
