@@ -52,7 +52,7 @@ function dibujarProducto() {
   document.getElementById("producto-portada-texto").textContent = producto.nombre.toUpperCase();
   portada.style.backgroundColor = producto.fondo;
   if (producto.imagen != "") {
-    portada.style.backgroundImage = 'url("' + urlImagenJuego(producto.imagen) + '")';
+    portada.style.backgroundImage = 'url("../img/' + producto.imagen + '")';
     portada.classList.add("tarjeta-portada-imagen");
   }
 

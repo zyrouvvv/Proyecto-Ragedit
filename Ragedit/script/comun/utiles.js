@@ -84,3 +84,4 @@ function crearEstrellas(valor) {
   caja.textContent = "★★★★★".slice(0, llenas) + "☆☆☆☆☆".slice(0, 5 - llenas);
   return caja;
 }
+

@@ -23,8 +23,8 @@ for (var j = 0; j < destacados.length; j++) {
   diapositiva.className = "carrusel-diapositiva";
   diapositiva.style.backgroundColor = p.fondo;
 
-  if (p.imagen != "") {
-    diapositiva.style.backgroundImage = 'linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.08) 70%), url("' + urlImagenJuego(p.imagen) + '")';
+if (p.imagen != "") {
+    diapositiva.style.backgroundImage = 'linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.08) 70%), url("../img/' + p.imagen + '")';
     diapositiva.classList.add("carrusel-diapositiva-imagen");
   }
   diapositiva.innerHTML =

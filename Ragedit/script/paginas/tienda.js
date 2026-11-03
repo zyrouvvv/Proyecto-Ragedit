@@ -73,8 +73,8 @@ function crearTarjeta(p) {
 
   var portada = tarjeta.querySelector(".tarjeta-portada");
   portada.style.backgroundColor = p.fondo;
-  if (p.imagen != "") {
-    portada.style.backgroundImage = 'url("' + urlImagenJuego(p.imagen) + '")';
+ if (p.imagen != "") {
+    portada.style.backgroundImage = 'url("../img/' + p.imagen + '")';
     portada.classList.add("tarjeta-portada-imagen");
   }
   return tarjeta;

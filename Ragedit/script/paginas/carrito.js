@@ -65,7 +65,7 @@ function dibujarCarrito(carrito) {
     var portada = fila.querySelector(".fila-carrito-portada");
     portada.style.backgroundColor = p.fondo;
     if (p.imagen != "") {
-      portada.style.backgroundImage = 'url("' + urlImagenJuego(p.imagen) + '")';
+      portada.style.backgroundImage = 'url("../img/' + p.imagen + '")';
       portada.classList.add("fila-carrito-portada-imagen");
     }
     listaCarrito.appendChild(fila);

@@ -1,14 +1,14 @@
 CREATE TABLE `usuarios` (
-  `usuarioID`     int NOT NULL AUTO_INCREMENT,
+  `usuarioID` int NOT NULL AUTO_INCREMENT,
   `nombreusuario` varchar(50) NOT NULL,
-  `contraseña`    varchar(255) NOT NULL,
-  `email`         varchar(100) NOT NULL,
-  `genero`        varchar(30) DEFAULT NULL,
-  `desc`          text DEFAULT NULL,
-  `foto`          varchar(255) DEFAULT NULL,
-  `estado`        varchar(20) DEFAULT 'Activo',
-  `rol`           varchar(10) NOT NULL DEFAULT 'usuario',
-  `registro`      datetime DEFAULT CURRENT_TIMESTAMP,
+  `contraseña` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `genero` varchar(30) DEFAULT NULL,
+  `desc` text DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `estado` varchar(20) DEFAULT 'Activo',
+  `rol` varchar(10) NOT NULL DEFAULT 'usuario',
+  `registro` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`usuarioID`),
   UNIQUE KEY `nombreusuario` (`nombreusuario`),
   UNIQUE KEY `email` (`email`)
@@ -255,19 +255,19 @@ INSERT INTO `comentarios` (`comentarioID`, `publicacionID`, `perfilID`, `usuario
 INSERT INTO `repost` (`usuarioID`, `publicacionID`, `fecharepost`) VALUES
 (1, 2, NOW() - INTERVAL 1 HOUR);
 
-INSERT INTO `productos` (`productoID`, `nombre`, `categoria`, `precio`, `destacado`, `fondo`, `imagen`) VALUES
-(1,  'GTA V',               'Accion',   29.99, 'Mundo abierto',    '#3a3a3a',  ''),
-(2,  'Counter-Strike 2',    'Shooter',  14.99, '',                 '#2c2c2c'),
-(3,  'FIFA 14',             'Deportes',  9.99, 'Messi en portada', '#444444'),
-(4,  'LEGO Batman',         'Aventura', 12.50, '',                 '#333333'),
-(5,  'COD: Modern Warfare', 'Shooter',  39.99, '',                 '#262626'),
-(6,  'Minecraft',           'Aventura', 26.95, '',                 '#4a4a4a'),
-(7,  'The Witcher 3',       'RPG',      19.99, '',                 '#303030'),
-(8,  'Elden Ring',          'RPG',      59.99, 'Juego del año',    '#3d3d3d'),
-(9,  'Hollow Knight',       'Indie',    14.99, '',                 '#2a2a2a'),
-(10, 'Celeste',             'Indie',    19.99, '',                 '#474747'),
-(11, 'Rocket League',       'Deportes', 19.99, '',                 '#353535'),
-(12, 'Portal 2',            'Aventura',  9.99, '',                 '#2e2e2e');
+INSERT INTO `productos` (`productoID`, `nombre`, `categoria`, `precio`, `destacado`, `fondo`, `imagen`) VALUES 
+(1,  'GTA V',                'Accion',   29.99, 'Mundo abierto',   '#3a3a3a', 'gtav.png'),
+(2,  'Counter-Strike 2',     'Shooter',  14.99, '',                '#2c2c2c', 'cs2.png'),
+(3,  'FIFA 14',              'Deportes',  9.99, 'Messi en portada', '#444444', 'fifa14.png'),
+(4,  'LEGO Batman',          'Aventura', 12.50, '',                '#333333', 'legobatman.png'),
+(5,  'COD: Modern Warfare',  'Shooter',  39.99, '',                '#262626', 'codmodernwarfare.png'),
+(6,  'Minecraft',            'Aventura', 26.95, '',                '#4a4a4a', 'minecraft.png'),
+(7,  'The Witcher 3',        'RPG',      19.99, '',                '#303030', 'thewitcher3.png'),
+(8,  'Elden Ring',           'RPG',      59.99, 'Juego del año',   '#3d3d3d', 'eldenring.png'),
+(9,  'Hollow Knight',        'Indie',    14.99, '',                '#2a2a2a', 'hollowknight.png'),
+(10, 'Celeste',              'Indie',    19.99, '',                '#474747', 'celeste.png'),
+(11, 'Rocket League',        'Deportes', 19.99, '',                '#353535', 'rocketleague.png'),
+(12, 'Portal 2',             'Aventura',  9.99, '',                '#2e2e2e', 'portal2.png');
 
 INSERT INTO `resenas` (`usuarioID`, `productoID`, `estrellas`, `descripcion`, `fechacreacion`) VALUES
 (1, 1, 5, 'Un clásico, todavía lo sigo jugando. El mundo abierto es enorme.', NOW() - INTERVAL 10 DAY),
