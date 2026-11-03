@@ -1,215 +1,742 @@
-@media (max-width: 1200px) {
-  .encabezado-interno {
-    padding: 12px 20px;
-    gap: 12px 0;
-    flex-wrap: wrap;
+
+
+
+/* =====================================================
+   1. TABLET  (hasta 1024 px)
+   ===================================================== */
+@media (max-width: 1024px) {
+
+  /* ----- base ----- */
+  .principal {
+    padding: 24px 24px 40px;
   }
 
-  .logo {
-    flex: 0 0 auto;
-    margin-right: 32px;
+  /* ----- header: logo, buscador de 190-220 px, menu y avatar a la derecha ----- */
+  .encabezado-interno {
+    padding: 0 24px;
+    gap: 14px;
+  }
+
+  .logo img {
+    width: 56px;
   }
 
   .caja-busqueda {
-    flex: 1 1 240px;
-    max-width: 326px;
-    margin-right: 58px;
+    flex: 0 1 220px;
+    max-width: 220px;
+    margin-left: 4px;
   }
 
-  .navegacion {
-    margin-left: 8px;
+  .avatar {
+    width: 40px;
+    height: 40px;
   }
 
+  /* ----- footer: logo a la izquierda y los enlaces uno abajo del otro ----- */
   .pie {
-    padding-left: 80px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-items: start;
+    gap: 6px 48px;
+    padding: 28px 24px;
+    margin-top: 16px;
   }
 
-  .principal {
-    padding: 32px 20px 60px;
+  .pie p {
+    grid-row: 1 / span 2;
+    grid-column: 1;
   }
-}
 
-/* ---- tablet ---- */
-@media (max-width: 960px) {
-  .dos-columnas,
-  .carrito {
-    grid-template-columns: minmax(0, 1fr);
+  .pie a {
+    grid-column: 2;
+  }
+
+  .pie img {
+    width: 96px;
+  }
+
+  /* ----- tienda: grilla de 4 columnas ----- */
+  .tienda {
+    gap: 16px;
+  }
+
+  .tienda-cabecera {
+    min-height: 66px;
+    padding: 12px 16px;
+  }
+
+  .carrusel-diapositiva {
+    min-height: 240px;
+    padding: 24px 56px;
+  }
+
+  .tienda-cuerpo {
+    padding: 8px;
+  }
+
+  .tienda-cuerpo .pestanias {
+    gap: 9px;
+    margin: 6px 0 14px;
+  }
+
+  .tienda-cuerpo .pestania {
+    min-width: 110px;
+  }
+
+  .grilla {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .tarjeta-portada {
+    aspect-ratio: 1 / .96;
+  }
+
+  .tarjeta-cuerpo {
+    padding: 10px 10px 4px;
+  }
+
+  .tarjeta-nombre {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  .tarjeta-pie {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin: 0 10px;
+    padding: 8px 0 12px;
+  }
+
+  .tarjeta-pie .boton {
+    width: 100%;
+    height: 34px;
+  }
+
+  /* ----- foros / perfil: columna principal + lateral de 230 px ----- */
+  .dos-columnas {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 22px;
   }
 
   .columna-principal {
-    gap: 24px;
+    gap: 14px;
+  }
+
+  .acciones {
+    padding: 14px 16px;
+    gap: 10px 14px;
+  }
+
+  .filas {
+    gap: 13px;
+  }
+
+  .fila {
+    grid-template-columns: 48px minmax(0, 1fr) 64px 64px 64px;
+    min-height: 68px;
+  }
+
+  .lateral {
+    padding: 14px;
   }
 
   .comunidades {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
   }
 
   .comunidad {
-    height: 170px;
+    height: 198px;
+  }
+
+  /* perfil */
+  .perfil-cabecera {
+    gap: 28px;
+    padding: 20px 24px;
+    min-height: 216px;
+  }
+
+  .perfil-cabecera-avatar {
+    width: 125px;
+    height: 125px;
+    font-size: 54px;
+  }
+
+  .perfil-cabecera-nombre {
+    font-size: 28px;
+  }
+
+  .perfil-cabecera-bio {
+    font-size: 16px;
+    padding-left: 14px;
+  }
+
+  .perfil-lista {
+    padding: 14px;
   }
 
   .panel-comentarios {
-    min-height: 0;
+    padding: 14px;
   }
 
+  .panel-comentarios-titulo {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  /* ----- login / registro y formularios del panel ----- */
+  .acceso {
+    max-width: 511px;
+    padding: 26px 30px 22px;
+  }
+
+  /* ----- crear / editar publicacion: una sola columna, imagen de 300x177 ----- */
   .editor,
   .publi,
   .gestion {
+    max-width: none;
     margin-left: 0;
+  }
+
+  .editor-barra {
+    min-height: 77px;
+    padding: 12px 20px;
+  }
+
+  .editor-barra-titulo {
+    font-size: 24px;
   }
 
   .editor-cuerpo {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .editor-imagen {
-    margin: 0 0 16px;
-    order: -1;
-  }
-
-  .perfil-cabecera {
-    gap: 28px;
-    padding: 20px;
-  }
-
-  .perfil-cabecera-avatar {
-    width: 150px;
-    height: 150px;
-    font-size: 60px;
-  }
-
-  .acceso {
-    padding: 28px 28px 24px;
-  }
-
-  .acceso-titulo {
-    font-size: 48px;
-  }
-
-  .acceso-cambio {
-    margin-left: 0;
-  }
-
-  .carrusel-diapositiva {
-    padding: 28px 40px 60px;
-    min-height: 300px;
-  }
-
-  .pie {
-    padding-left: 40px;
-  }
-}
-
-/* ---- celular ---- */
-@media (max-width: 640px) {
-  .principal {
-    padding: 20px 12px 40px;
-  }
-
-  .encabezado-interno {
-    padding: 10px 12px;
     min-height: 0;
+    padding: 0 20px;
   }
 
-  .logo {
-    order: 1;
-    font-size: 22px;
-    margin-right: 0;
-    flex: 1 1 auto;
+  .editor-titulo {
+    font-size: 30px;
   }
 
-  .zona-usuario {
-    order: 2;
-    margin-left: auto;
-  }
-
-  .avatar {
-    width: 46px;
-    height: 46px;
+  .editor-subtitulo {
     font-size: 20px;
   }
 
-  .zona-usuario .triangulo {
-    width: 20px;
-    height: 15px;
+  .editor-texto {
+    min-height: 260px;
   }
 
-  .caja-busqueda {
-    order: 3;
-    flex: 1 1 100%;
+  .editor-imagen {
+    grid-row: auto;
+    margin: 0 0 20px;
+    width: 300px;
+    height: 177px;
+  }
+
+  .editor-pie {
+    min-height: 0;
+    padding: 18px 20px 16px;
+  }
+
+  /* ----- ver publicacion ----- */
+  .publi-principal {
+    padding: 4px 20px 28px 20px;
+  }
+
+  .publi-titulo {
+    font-size: 30px;
+  }
+
+  .publi-subtitulo {
+    font-size: 20px;
+  }
+
+  .publi-comentarios {
+    padding: 16px 20px 20px 12px;
+  }
+
+  .publi-acciones {
+    padding: 14px 20px 14px 15px;
+    gap: 12px 14px;
+  }
+
+  .publi-acciones .entrada-comentario {
+    flex: 1 1 220px;
+  }
+
+  .votos {
+    gap: 16px;
+  }
+
+  .voto {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  /* ----- gestionar publicaciones: tarjetas de ~212 px ----- */
+  .gestion-cuerpo {
+    padding: 14px 16px 24px 12px;
+    min-height: 0;
+  }
+
+  .gestion-grilla {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .tarjeta-gestion-titulo {
+    font-size: 18px;
+  }
+
+  /* ----- carrito: lista + resumen de 230 px ----- */
+  .carrito {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 22px;
+  }
+
+  .carrito-barra {
+    padding: 14px 18px;
+    gap: 12px 16px;
+  }
+
+  .carrito-barra .editor-barra-titulo {
+    font-size: 20px;
+  }
+
+  .carrito-lista {
+    padding: 12px;
+  }
+
+  /* cada producto: imagen · datos · subtotal arriba · cantidad y quitar abajo */
+  .fila-carrito {
+    grid-template-columns: 97px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "img info sub"
+      "img cant borrar";
+    align-items: start;
+    gap: 10px 14px;
+    padding: 12px;
+  }
+
+  .fila-carrito-portada {
+    grid-area: img;
+    width: 97px;
+    height: 97px;
+  }
+
+  .fila-carrito > div:nth-child(2) {
+    grid-area: info;
+  }
+
+  .fila-carrito .cantidad {
+    grid-area: cant;
+    align-self: end;
+    justify-self: start;
+  }
+
+  .fila-carrito-subtotal {
+    grid-area: sub;
+    min-width: 0;
+    font-size: 18px;
+  }
+
+  .fila-carrito-borrar {
+    grid-area: borrar;
+    align-self: end;
+    justify-self: end;
+  }
+
+  .fila-carrito-nombre {
+    font-size: 17px;
+  }
+
+  .fila-carrito-categoria {
+    font-size: 13px;
+  }
+
+  .resumen {
+    padding: 8px 14px 18px;
+    top: 90px;
+  }
+
+  .resumen-linea {
+    font-size: 14px;
+  }
+
+  .resumen-linea-total {
+    font-size: 18px;
+  }
+
+  .resumen .boton {
+    font-size: 14px;
+  }
+
+  /* ----- panel de administracion y videojuegos ----- */
+  .panel-admin .editor-barra {
+    min-height: 109px;
+    padding: 16px 20px;
+    gap: 12px 16px;
+  }
+
+  .panel-admin-cuerpo {
+    padding: 16px 20px 24px;
+  }
+
+  .tabla-usuarios {
+    font-size: 14px;
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: 8px 6px;
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td:first-child,
+  tbody#tabla-juegos td:nth-child(5) {
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+
+  .tabla-usuarios td .tabla-acciones {
+    flex-wrap: nowrap;
+  }
+
+  .tabla-acciones .boton-pastilla,
+  .tabla-acciones .boton-chico {
+    font-size: 13px;
+    height: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tabla-acciones .boton-chico {
+    padding-left: 28px;
+  }
+
+  .tabla-acciones {
+    gap: 8px;
+  }
+
+  .miniatura-juego,
+  .muestra-color {
+    width: 64px;
+    height: 40px;
+  }
+
+  .filtros-admin {
+    gap: 10px;
+  }
+
+  /* ----- paginas de informacion ----- */
+  .pagina-info {
     max-width: none;
-    margin: 0 46px 0 0;
-    height: 32px;
+    padding: 28px 28px 36px;
   }
 
-  .caja-busqueda input {
+  .pagina-info h1 {
+    font-size: 30px;
+  }
+
+  .pagina-info p,
+  .pagina-info li {
+    font-size: 17px;
+  }
+}
+
+
+/* =====================================================
+   2. CELULAR  (hasta 600 px)
+   ===================================================== */
+@media (max-width: 600px) {
+
+  /* ----- base: margenes de 12 px ----- */
+  .principal {
+    padding: 12px 12px 28px;
+  }
+
+  input,
+  select,
+  textarea {
     font-size: 16px;
   }
 
-  .boton-busqueda {
-    top: -1px;
-    left: calc(100% + 6px);
+  /* ----- header: logo · titulo del menu · lupa · avatar ----- */
+  .encabezado-interno {
+    position: relative;
+    min-height: 56px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 44px;
   }
 
   .navegacion {
-    order: 4;
-    margin-left: 0;
-    flex: 1 1 100%;
+    order: 1;
+    margin-left: 4px;
   }
 
   .menu-boton {
-    font-size: 24px;
+    padding: 8px 8px;
+    font-size: 15px;
   }
 
-  .navegacion .triangulo {
-    width: 22px;
-    height: 16px;
+  /* el buscador queda en una lupa; al tocarla se abre sobre todo el header */
+  .caja-busqueda {
+    order: 2;
+    flex: none;
+    width: 38px;
+    max-width: none;
+    height: 38px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border-color: transparent;
+    background: transparent;
+  }
+
+  .caja-busqueda input {
+    display: none;
+  }
+
+  .boton-busqueda {
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+    color: #ffffff;
+  }
+
+  .caja-busqueda.abierta {
+    position: absolute;
+    z-index: 5;
+    left: 12px;
+    right: 12px;
+    top: 8px;
+    width: auto;
+    height: 40px;
+    padding-right: 3px;
+    border-color: #3a3c43;
+    background: #2a2b30;
+  }
+
+  .caja-busqueda.abierta input {
+    display: block;
+  }
+
+  .zona-usuario {
+    order: 3;
+    margin-left: 0;
+  }
+
+  .zona-usuario .menu-boton {
+    padding: 3px 6px 3px 2px;
+    gap: 6px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
   }
 
   .menu-lista {
     min-width: 200px;
   }
 
+  /* ----- footer ----- */
   .pie {
-    padding: 28px 20px 20px;
-    font-size: 17px;
-    min-height: 0;
+    gap: 4px 28px;
+    padding: 24px 12px;
+    font-size: 15px;
+  }
+
+  .pie img {
+    width: 72px;
+  }
+
+  /* ----- tienda: 2 columnas de ~168 px ----- */
+  .tienda {
+    gap: 8px;
+  }
+
+  .tienda-cabecera {
+    flex-wrap: nowrap;
+    min-height: 48px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .tienda-titulo {
+    font-size: 16px;
+  }
+
+  .tienda-cabecera .boton {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .carrusel-diapositiva {
+    min-height: 190px;
+    padding: 16px 44px 34px;
+  }
+
+  .carrusel-nombre {
+    font-size: 22px;
+  }
+
+  .carrusel-precio {
+    font-size: 16px;
+  }
+
+  .carrusel-etiqueta {
+    font-size: 12px;
+  }
+
+  .boton-diapositiva {
+    height: 38px;
+    padding: 0 14px;
+    font-size: 15px;
+  }
+
+  .carrusel-flecha {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    padding: 0 0 3px;
+  }
+
+  .carrusel-flecha-anterior {
+    left: 6px;
+  }
+
+  .carrusel-flecha-siguiente {
+    right: 6px;
+  }
+
+  .carrusel-puntos {
+    right: 12px;
+    bottom: 10px;
+  }
+
+  .tienda-cuerpo {
+    padding: 12px;
+  }
+
+  .tienda-cuerpo .pestanias {
+    gap: 8px;
+    margin: 0 0 12px;
+  }
+
+  .tienda-cuerpo .pestania {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 4px;
+    font-size: 12px;
+  }
+
+  .grilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .tarjeta-portada {
+    aspect-ratio: 156 / 100;
+    font-size: 14px;
+  }
+
+  .tarjeta-cuerpo {
+    padding: 8px 8px 2px;
+  }
+
+  .tarjeta-nombre {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .tarjeta-categoria {
+    font-size: 11.5px;
+  }
+
+  .tarjeta-pie {
+    gap: 6px;
+    margin: 0 8px;
+    padding: 6px 0 8px;
+  }
+
+  .precio {
+    font-size: 14px;
+  }
+
+  .tarjeta-pie .boton {
+    height: 32px;
+    font-size: 12.5px;
+  }
+
+  /* ----- foros: todo en una columna, comunidades abajo ----- */
+  .dos-columnas {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .columna-principal {
+    gap: 8px;
   }
 
   .acciones {
-    padding: 12px;
-    gap: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 10px 12px;
   }
 
   .acciones .boton {
-    font-size: 19px;
     width: 100%;
+    min-height: 38px;
+    justify-content: flex-start;
   }
 
   .panel-lista {
     padding: 8px;
   }
 
-  .pestania {
-    font-size: 15px;
-    padding: 0 9px;
+  .panel-lista .pestanias {
+    gap: 6px;
+    margin-bottom: 10px;
   }
 
-  .pestanias {
-    gap: 8px;
+  .panel-lista .pestania {
+    flex: 1 1 auto;
+    height: 28px;
+    line-height: 26px;
+    padding: 0 6px;
+    font-size: 11.5px;
   }
 
+  .filas {
+    gap: 6px;
+  }
+
+  /* fila de publicacion: miniatura · titulo (hasta 2 lineas) · juego · numeros abajo */
   .fila {
-    grid-template-columns: 48px minmax(0, 1fr) auto auto auto;
-    padding: 6px 8px 6px 6px;
-    row-gap: 2px;
-    min-height: 0;
+    grid-template-columns: 48px repeat(3, auto) 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    min-height: 98px;
+    padding: 8px 10px 8px 8px;
+    row-gap: 4px;
   }
 
   .fila-miniatura {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     width: 44px;
     height: 44px;
-    grid-row: 1 / span 2;
   }
 
   .fila-info {
@@ -219,19 +746,30 @@
   }
 
   .fila-titulo {
-    font-size: 17px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 13.5px;
   }
 
   .fila-juego {
-    font-size: 14px;
-    margin-left: 0;
+    font-size: 12px;
   }
 
   .fila-dato {
     grid-row: 2;
-    font-size: 16px;
-    text-align: left;
+    justify-content: flex-start;
+    align-self: end;
     padding-left: 8px;
+    margin-right: 10px;
+    font-size: 13px;
+  }
+
+  .fila-etiquetada {
+    grid-template-rows: auto auto auto;
+    min-height: 104px;
   }
 
   .fila-etiquetada .fila-miniatura {
@@ -244,263 +782,1280 @@
 
   .fila-etiquetada .fila-dato {
     grid-row: 3;
-    font-size: 16px;
   }
 
-  .fila-etiquetada .fila-titulo {
-    font-size: 17px;
+  .lateral {
+    padding: 12px;
+  }
+
+  .lateral-titulo {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+
+  .comunidades {
+    gap: 8px;
   }
 
   .comunidad {
-    height: 150px;
+    height: 120px;
   }
 
-  .comunidad-nombre {
-    font-size: 20px;
-  }
-
-  .acceso {
-    padding: 22px 16px 20px;
-  }
-
-  .acceso-titulo {
-    font-size: 36px;
-  }
-
-  .campo-etiqueta {
-    font-size: 22px;
-  }
-
-  .campo-entrada {
-    height: 48px;
-    font-size: 18px;
-  }
-
-  .campo-ayuda {
-    font-size: 15px;
-  }
-
-  .campo-ayuda-chica {
-    font-size: 14px;
-  }
-
-  .casilla {
-    font-size: 17px;
-  }
-
-  .desplegable-genero {
-    margin-left: 8px;
-    width: 170px;
-  }
-
-  .acceso .boton-enviar {
-    width: 100%;
-  }
-
-  .rapido {
-    width: 76px;
-    height: 76px;
-  }
-
-  .tienda-cabecera {
-    padding: 14px;
-  }
-
-  .tienda-titulo {
-    font-size: 22px;
-  }
-
-  .tienda-cabecera .boton {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .carrusel-diapositiva {
-    padding: 22px 20px 56px;
-    min-height: 260px;
-  }
-
-  .carrusel-flecha {
-    width: 38px;
-    height: 38px;
-    font-size: 20px;
-  }
-
-  .carrusel-precio {
-    font-size: 20px;
-  }
-
-  .grilla {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
+  /* ----- perfil: avatar y nombre arriba, descripcion abajo ----- */
   .perfil-cabecera {
-    flex-direction: column;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: center;
+    gap: 6px 16px;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .perfil-cabecera > div:not(.perfil-cabecera-avatar) {
+    display: contents;
+  }
+
+  .perfil-cabecera-avatar {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
   }
 
   .perfil-cabecera-nombre {
-    font-size: 30px;
-  }
-
-  .perfil-cabecera-bio {
-    text-align: left;
-    padding-left: 14px;
-    font-size: 17px;
-  }
-
-  .perfil-cabecera-union {
-    padding-left: 0;
-  }
-
-  .perfil-lista {
-    padding: 12px 8px;
-    min-height: 0;
-  }
-
-  .panel-comentarios {
-    padding: 14px;
-  }
-
-  .editor-barra {
-    padding: 12px;
-    gap: 12px;
-  }
-
-  .editor-barra-titulo {
-    font-size: 21px;
-  }
-
-  .editor-cuerpo {
-    padding: 8px 12px 0;
-    min-height: 0;
-  }
-
-  .editor-titulo {
-    font-size: 28px;
-    height: 46px;
-  }
-
-  .editor-subtitulo {
-    font-size: 19px;
-  }
-
-  .editor-texto {
-    min-height: 260px;
-  }
-
-  .boton-publicar {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
     font-size: 22px;
   }
 
+  .perfil-cabecera-union {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .perfil-cabecera-bio {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 6px;
+    padding-left: 12px;
+    font-size: 15px;
+    max-width: none;
+  }
+
+  .perfil-cabecera-editar {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    justify-self: start;
+    margin: 6px 0 0;
+  }
+
+  .perfil-lista {
+    min-height: 0;
+    padding: 8px;
+  }
+
+  .panel-comentarios {
+    min-height: 0;
+    padding: 12px;
+  }
+
+  /* ----- login / registro y formularios ----- */
+  .acceso {
+    margin-top: 0;
+    padding: 18px 12px 18px;
+  }
+
+  .acceso-titulo {
+    font-size: 24px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+  }
+
+  .campo-entrada {
+    height: 40px;
+  }
+
+  .campo-texto {
+    height: 110px;
+  }
+
+  .acceso-genero {
+    flex-wrap: wrap;
+  }
+
+  .desplegable-genero {
+    width: min(194px, 100%);
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  .desplegable-panel {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .acceso .boton-enviar {
+    height: 44px;
+  }
+
+  .acceso-rapido-lista {
+    gap: 8px;
+  }
+
+  .rapido {
+    min-width: 0;
+    font-size: 12px;
+  }
+
+  /* ----- crear / editar publicacion ----- */
+  .editor-barra {
+    min-height: 84px;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .editor-barra-titulo {
+    flex-basis: 100%;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .editor-cuerpo {
+    padding: 0 12px;
+  }
+
+  .editor-titulo {
+    height: 44px;
+    font-size: 22px;
+  }
+
+  .editor-subtitulo {
+    height: 34px;
+    font-size: 16px;
+  }
+
+  .editor-texto {
+    min-height: 220px;
+    font-size: 16px;
+  }
+
+  .editor-imagen {
+    width: min(205px, 100%);
+    height: 121px;
+    margin-left: auto;
+  }
+
+  .editor-pie {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .desplegable-juego {
+    width: 100%;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .boton-publicar {
+    width: 100%;
+    font-size: 20px;
+    height: 42px;
+  }
+
+  /* ----- ver publicacion ----- */
+  .publi-barra {
+    padding: 8px 12px;
+  }
+
   .publi-principal {
-    padding: 4px 12px 24px 12px;
-    margin-left: 4px;
+    margin-left: 6px;
+    padding: 4px 12px 22px 12px;
+  }
+
+  .publi-cabecera {
+    justify-content: flex-start;
+    text-align: left;
+    gap: 4px 10px;
+  }
+
+  .publi-titulo {
+    font-size: 21px;
   }
 
   .publi-subtitulo {
-    font-size: 19px;
+    font-size: 16px;
+  }
+
+  .publi-texto {
+    font-size: 15px;
   }
 
   .publi-comentarios {
-    margin-left: 4px;
-    padding: 14px 10px 16px 8px;
+    margin-left: 6px;
+    padding: 14px 12px 16px 8px;
   }
 
   .publi-comentarios .hilo > li {
-    padding-left: 50px;
+    padding-left: 52px;
   }
 
   .avatar-chico {
     left: 10px;
+    width: 32px;
+    height: 32px;
   }
 
   .publi-acciones {
+    flex-wrap: wrap;
     padding: 12px;
+    gap: 10px;
   }
 
   .publi-acciones .entrada-comentario {
-    flex-basis: 100%;
+    flex: 1 1 0;
+    min-width: 0;
     max-width: none;
+    height: 36px;
+  }
+
+  .publi-acciones .enviar-comentario {
+    flex: none;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 13px;
   }
 
   .votos {
-    margin-left: 0;
-    gap: 14px;
     width: 100%;
-    justify-content: space-between;
-  }
-
-  .voto {
-    font-size: 20px;
+    margin-left: 0;
+    justify-content: space-around;
     gap: 8px;
   }
 
+  .voto button {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ----- gestionar publicaciones: 1 tarjeta por fila ----- */
   .gestion-cuerpo {
-    padding: 10px 8px 16px 4px;
-    min-height: 300px;
+    gap: 8px;
+    padding: 12px 12px 20px 8px;
   }
 
   .gestion-grilla {
     grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
   }
 
-  .fila-carrito {
-    grid-template-columns: 72px minmax(0, 1fr) 34px;
-    padding: 8px;
-    gap: 8px 12px;
+  .tarjeta-gestion {
+    min-height: 0;
   }
 
-  .fila-carrito-portada {
-    width: 72px;
-    height: 52px;
-    font-size: 14px;
+  .tarjeta-gestion-imagen {
+    height: 90px;
+    margin-bottom: 12px;
   }
 
-  .fila-carrito-nombre {
-    font-size: 17px;
-  }
-
-  .fila-carrito .cantidad {
-    grid-column: 2;
-    grid-row: 2;
-    width: max-content;
-  }
-
-  .fila-carrito-subtotal {
-    grid-column: 2;
-    grid-row: 3;
-    text-align: left;
-    font-size: 19px;
-  }
-
-  .fila-carrito-borrar {
-    grid-column: 3;
-    grid-row: 1;
+  /* ----- carrito: lista y resumen apilados ----- */
+  .carrito {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
   }
 
   .carrito-barra {
     padding: 12px;
   }
-}
 
-/* ---------- Agregados del sprint 3 ---------- */
-@media (max-width: 700px) {
+  .carrito-barra .editor-barra-titulo {
+    flex-basis: auto;
+    font-size: 17px;
+  }
+
+  .carrito-lista {
+    padding: 8px;
+  }
+
+  .fila-carrito {
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "img info info"
+      "img cant sub"
+      "img . borrar";
+    gap: 6px 10px;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .fila-carrito-portada {
+    width: 90px;
+    height: 90px;
+  }
+
+  .fila-carrito-subtotal {
+    align-self: center;
+    justify-self: end;
+    font-size: 16px;
+  }
+
+  .fila-carrito-nombre {
+    font-size: 15px;
+  }
+
+  .cantidad button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cantidad output {
+    min-width: 36px;
+    font-size: 16px;
+  }
+
+  .resumen {
+    position: static;
+    padding: 8px 12px 16px;
+  }
+
+  /* ----- paneles de administracion: cada fila de la tabla pasa a ser una tarjeta ----- */
+  .panel-admin .editor-barra {
+    min-height: 96px;
+    padding: 12px;
+  }
+
+  .panel-admin .tabla-acciones {
+    width: 100%;
+  }
+
+  .panel-admin .tabla-acciones .boton-pastilla {
+    flex: 1 1 auto;
+  }
+
+  .panel-admin-cuerpo {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .panel-admin-formulario {
+    padding: 12px;
+  }
+
+  .panel-admin-formulario .campo-etiqueta {
+    font-size: 16px;
+  }
+
+  .filtros-admin .campo-entrada {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .filtros-admin .desplegable-panel {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 36px;
+  }
+
+  .tabla-contenedor {
+    overflow-x: visible;
+  }
+
+  .tabla-usuarios,
+  .tabla-usuarios tbody,
+  .tabla-usuarios tr,
+  .tabla-usuarios td {
+    display: block;
+  }
+
+  .tabla-usuarios {
+    border: 0;
+    border-radius: 0;
+    font-size: 14px;
+  }
+
+  .tabla-usuarios thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .tabla-usuarios tbody tr {
+    margin-bottom: 8px;
+    padding: 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: var(--radio);
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: 0;
+    border: 0;
+  }
+
+  .tabla-usuarios tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .tabla-usuarios .tabla-acciones {
+    margin-top: 8px;
+  }
+
+  .tabla-usuarios .tabla-acciones .boton {
+    height: 30px;
+    font-size: 13px;
+  }
+
+  /* usuarios: id · nombre / correo / estado · rol / botones */
+  tbody#tabla-usuarios tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 12px;
+  }
+
+  tbody#tabla-usuarios td:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    color: var(--texto-suave);
+    font-size: 12px;
+  }
+
+  tbody#tabla-usuarios td:nth-child(1)::before {
+    content: "ID ";
+  }
+
+  tbody#tabla-usuarios td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  tbody#tabla-usuarios td:nth-child(3) {
+    grid-column: 1 / -1;
+    color: var(--texto-suave);
+  }
+
+  tbody#tabla-usuarios td:nth-child(4)::before {
+    content: "Estado: ";
+    font-weight: 700;
+  }
+
+  tbody#tabla-usuarios td:nth-child(5)::before {
+    content: "Rol: ";
+    font-weight: 700;
+  }
+
+  tbody#tabla-usuarios td:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+
+  /* videojuegos: id / imagen a la izquierda y los datos a la derecha / botones */
+  tbody#tabla-juegos tr {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 4px 12px;
+  }
+
+  tbody#tabla-juegos td:nth-child(1) {
+    grid-column: 1 / -1;
+    color: var(--texto-suave);
+    font-size: 12px;
+  }
+
+  tbody#tabla-juegos td:nth-child(1)::before {
+    content: "ID ";
+  }
+
+  tbody#tabla-juegos td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2 / span 4;
+  }
+
+  tbody#tabla-juegos td:nth-child(2) .miniatura-juego,
+  tbody#tabla-juegos td:nth-child(2) .muestra-color {
+    width: 60px;
+    height: 60px;
+  }
+
+  tbody#tabla-juegos td:nth-child(3),
+  tbody#tabla-juegos td:nth-child(4),
+  tbody#tabla-juegos td:nth-child(5),
+  tbody#tabla-juegos td:nth-child(6) {
+    grid-column: 2;
+  }
+
+  tbody#tabla-juegos td:nth-child(3)::before {
+    content: "NOMBRE: ";
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  tbody#tabla-juegos td:nth-child(4)::before {
+    content: "CATEGORIA: ";
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  tbody#tabla-juegos td:nth-child(5)::before {
+    content: "PRECIO: ";
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  tbody#tabla-juegos td:nth-child(6)::before {
+    content: "DESTACADO: ";
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  tbody#tabla-juegos td:nth-child(7) {
+    grid-column: 1 / -1;
+  }
+
+  /* ----- paginas de informacion y equipo ----- */
+  .pagina-info {
+    padding: 20px 16px 28px;
+  }
+
+  .pagina-info h1 {
+    font-size: 24px;
+    padding-bottom: 8px;
+  }
+
+  .pagina-info h2 {
+    font-size: 19px;
+  }
+
+  .pagina-info p,
+  .pagina-info li {
+    font-size: 16px;
+  }
+
   .pagina-info .equipo {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .equipo-nombre {
+    font-size: 18px;
   }
 
   .integrante-cabecera {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
   }
 
-  .integrante-foto {
-    width: 110px;
-    height: 110px;
+  .integrante-foto,
+  .integrante-inicial {
+    width: 96px;
+    height: 96px;
   }
 
   .integrante-inicial {
-    font-size: 48px;
+    font-size: 44px;
+  }
+
+  /* ----- extras ----- */
+  .aviso {
+    width: calc(100% - 24px);
+    max-width: 420px;
+    bottom: 12px;
+  }
+
+  .back-to-top {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+
+/* celulares muy chicos (320 px) */
+@media (max-width: 360px) {
+  .logo img {
+    width: 38px;
+  }
+
+  .menu-boton {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  .tienda-cuerpo {
+    padding: 8px;
+  }
+
+  .tienda-cuerpo .pestania {
+    font-size: 11px;
+  }
+
+  .acceso-rapido-lista {
+    flex-direction: column;
+  }
+
+  .rapido {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   AJUSTES RESPONSIVE EXTRA
+   Producto / reseñas / tablas de administración
+   ===================================================== */
+
+/* Evita que los paneles y tablas generen desbordamiento horizontal. */
+.panel-admin,
+.panel-admin-cuerpo,
+.tabla-contenedor,
+.producto,
+.producto-cuerpo,
+.producto-seccion {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabla-usuarios {
+  table-layout: auto;
+}
+
+.tabla-usuarios td,
+.tabla-usuarios th {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.panel-admin .editor-barra,
+.panel-admin .tabla-acciones,
+.filtros-admin {
+  min-width: 0;
+}
+
+.panel-admin .editor-barra-titulo {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.panel-admin .tabla-acciones .boton,
+.tabla-usuarios .tabla-acciones .boton {
+  white-space: normal;
+  text-align: center;
+}
+
+/* Producto: ficha, resumen de valoraciones y reseñas. */
+.producto-ficha {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.producto-portada {
+  width: 100%;
+}
+
+.producto-datos,
+.producto-detalles,
+.producto-detalles > div,
+.valoraciones,
+.valoraciones-barras,
+.resena > div {
+  min-width: 0;
+}
+
+.resena-texto-publicado {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 900px) {
+  .producto-ficha {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 22px;
+  }
+
+  .producto-detalles > div {
+    grid-template-columns: minmax(115px, 0.75fr) minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .valoraciones {
+    grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .panel-admin .editor-barra {
+    align-items: center;
+  }
+
+  .tabla-reportes {
+    min-width: 850px;
+  }
+
+  .panel-admin:not(:has(#tabla-reportes)) .tabla-usuarios {
+    min-width: 620px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Ficha de videojuego */
+  .producto {
+    width: 100%;
+  }
+
+  .producto .editor-barra {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .producto .editor-barra-titulo {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 17px;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .producto-ficha {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .producto-portada-caja {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .producto-portada {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    font-size: 20px;
+  }
+
+  .producto-datos {
+    gap: 10px;
+  }
+
+  .producto-nombre {
+    font-size: clamp(23px, 7vw, 32px);
+  }
+
+  .producto-puntaje {
+    gap: 4px 8px;
+    font-size: 13px;
+  }
+
+  .producto-puntaje .estrellas {
+    font-size: 19px;
+  }
+
+  .producto-detalles {
+    gap: 10px;
+  }
+
+  .producto-detalles > div {
+    grid-template-columns: minmax(105px, 38%) minmax(0, 1fr);
+    gap: 8px;
+    align-items: start;
+  }
+
+  .producto-detalles dt {
+    font-size: 11px;
+  }
+
+  .producto-detalles dd {
+    font-size: 13px;
+  }
+
+  .producto-compra {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .producto-precio {
+    font-size: 28px;
+  }
+
+  .producto-agregar {
+    width: 100%;
+    min-height: 42px;
+    height: auto;
+    padding: 10px 14px;
+    white-space: normal;
+  }
+
+  .producto-seccion {
+    padding: 14px 12px;
+  }
+
+  .producto-subtitulo {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .producto-descripcion {
+    font-size: 14px;
+  }
+
+  /* Resumen de valoraciones */
+  .valoraciones {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .valoraciones-resumen {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  .valoraciones-numero {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    font-size: 58px;
+  }
+
+  .valoraciones-resumen .estrellas {
+    grid-column: 2;
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+  .valoraciones-total {
+    grid-column: 2;
+    margin-top: 2px;
+  }
+
+  .valoraciones-barras {
+    gap: 7px;
+  }
+
+  .barra-fila {
+    grid-template-columns: 34px minmax(0, 1fr) 42px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .barra {
+    height: 9px;
+  }
+
+  /* Pestañas de reseñas: conservan todos los filtros sin salir del viewport. */
+  #filtros-resenas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  #filtros-resenas .pestania {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 5px;
+    font-size: 11px;
+  }
+
+  .resenas-lista {
+    gap: 10px;
+  }
+
+  .resena {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .resena-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .resena-cabecera {
+    align-items: flex-start;
+    gap: 5px 8px;
+  }
+
+  .resena-autor {
+    font-size: 14px;
+  }
+
+  .resena-cabecera .estrellas {
+    font-size: 13px;
+  }
+
+  .resena-etiqueta {
+    font-size: 9px;
+  }
+
+  .resena-texto-publicado {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .resena-acciones {
+    gap: 6px;
+  }
+
+  .resena-voto,
+  .resena-eliminar {
+    min-height: 30px;
+    height: auto;
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  .resena-eliminar {
+    margin-left: 0;
+  }
+
+  .resena-formulario .tabla-acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resena-formulario .tabla-acciones .boton {
+    width: 100%;
+  }
+
+  .resenas-mas {
+    width: 100%;
+  }
+
+  /* Cabeceras y filtros de administración */
+  .panel-admin .editor-barra {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 0;
+    gap: 10px;
+  }
+
+  .panel-admin .editor-barra-titulo {
+    flex: none;
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .panel-admin .tabla-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 7px;
+  }
+
+  .panel-admin .tabla-acciones .boton {
+    flex: 1 1 120px;
+    min-width: 0;
+    min-height: 34px;
+    height: auto;
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+
+  .panel-admin-cuerpo {
+    padding: 10px;
+  }
+
+  .filtros-admin {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .filtros-admin .campo-entrada,
+  .filtros-admin .desplegable-panel,
+  .filtros-admin .boton {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .panel-admin .pestanias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .panel-admin .pestania {
+    min-width: 0;
+    height: auto;
+    min-height: 34px;
+    padding: 6px 5px;
+    line-height: 1.2;
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  /* Las tablas se convierten en tarjetas con etiquetas por columna. */
+  .tabla-contenedor {
+    overflow: visible;
+  }
+
+  .tabla-usuarios,
+  .tabla-usuarios tbody,
+  .tabla-usuarios tr,
+  .tabla-usuarios td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tabla-usuarios {
+    font-size: 13px;
+  }
+
+  .tabla-usuarios thead {
+    display: none;
+  }
+
+  .tabla-usuarios tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 7px 10px;
+    margin: 0 0 10px;
+    padding: 11px;
+    border: 1px solid #555b65;
+    border-radius: var(--radio);
+    background: #fff;
+    color: #17191d;
+  }
+
+  .tabla-usuarios tbody td {
+    padding: 0;
+    border: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+  }
+
+  .tabla-usuarios tbody td::before {
+    display: inline;
+    color: #555b65;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .035em;
+  }
+
+  /* Panel de administración: ID, usuario, correo, estado, rol y acciones. */
+  tbody#tabla-usuarios td:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    font-size: 11px;
+  }
+
+  tbody#tabla-usuarios td:nth-child(1)::before {
+    content: "ID: ";
+  }
+
+  tbody#tabla-usuarios td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  tbody#tabla-usuarios td:nth-child(3) {
+    grid-column: 1 / -1;
+    font-size: 12px;
+  }
+
+  tbody#tabla-usuarios td:nth-child(3)::before {
+    content: "CORREO: ";
+  }
+
+  tbody#tabla-usuarios td:nth-child(4)::before {
+    content: "ESTADO: ";
+  }
+
+  tbody#tabla-usuarios td:nth-child(5)::before {
+    content: "ROL: ";
+  }
+
+  tbody#tabla-usuarios td:nth-child(6) {
+    grid-column: 1 / -1;
+    padding-top: 5px;
+  }
+
+  /* Gestionar videojuegos: imagen, nombre y metadatos legibles. */
+  tbody#tabla-juegos tr {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 6px 10px;
+  }
+
+  tbody#tabla-juegos td:nth-child(1) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: 11px;
+  }
+
+  tbody#tabla-juegos td:nth-child(1)::before {
+    content: "ID: ";
+  }
+
+  tbody#tabla-juegos td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2 / span 4;
+    align-self: start;
+  }
+
+  tbody#tabla-juegos td:nth-child(2) .miniatura-juego,
+  tbody#tabla-juegos td:nth-child(2) .muestra-color {
+    width: 58px;
+    height: 58px;
+    border-radius: 5px;
+  }
+
+  tbody#tabla-juegos td:nth-child(3),
+  tbody#tabla-juegos td:nth-child(4),
+  tbody#tabla-juegos td:nth-child(5),
+  tbody#tabla-juegos td:nth-child(6) {
+    grid-column: 2;
+  }
+
+  tbody#tabla-juegos td:nth-child(3) {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  tbody#tabla-juegos td:nth-child(3)::before {
+    content: "NOMBRE: ";
+  }
+
+  tbody#tabla-juegos td:nth-child(4)::before {
+    content: "CATEGORÍA: ";
+  }
+
+  tbody#tabla-juegos td:nth-child(5)::before {
+    content: "PRECIO: ";
+  }
+
+  tbody#tabla-juegos td:nth-child(6)::before {
+    content: "DESTACADO: ";
+  }
+
+  tbody#tabla-juegos td:nth-child(7) {
+    grid-column: 1 / -1;
+    padding-top: 5px;
+  }
+
+  tbody#tabla-juegos td:nth-child(7) .tabla-acciones {
+    justify-content: flex-start;
+  }
+
+  /* Reportes: cada dato tiene su etiqueta; acciones ocupan el ancho completo. */
+  tbody#tabla-reportes tr {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px 10px;
+  }
+
+  tbody#tabla-reportes td:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    font-size: 11px;
+  }
+
+  tbody#tabla-reportes td:nth-child(1)::before {
+    content: "ID: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(2)::before {
+    content: "FECHA: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(3)::before {
+    content: "TIPO: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  tbody#tabla-reportes td:nth-child(4)::before {
+    content: "REPORTADO: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  tbody#tabla-reportes td:nth-child(5)::before {
+    content: "MOTIVO: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+
+  tbody#tabla-reportes td:nth-child(6)::before {
+    content: "DETALLE: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(7)::before {
+    content: "REPORTÓ: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(8)::before {
+    content: "ESTADO: ";
+  }
+
+  tbody#tabla-reportes td:nth-child(9) {
+    grid-column: 1 / -1;
+    padding-top: 5px;
+  }
+
+  tbody#tabla-reportes td:nth-child(9) .tabla-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  tbody#tabla-reportes td:nth-child(9) .boton {
+    flex: 1 1 95px;
+    min-width: 0;
+    height: auto;
+    min-height: 32px;
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .tabla-usuarios .tabla-vacia {
+    grid-column: 1 / -1;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .producto-detalles > div {
+    grid-template-columns: minmax(88px, 36%) minmax(0, 1fr);
+  }
+
+  .resena {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .resena-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tabla-usuarios tbody tr {
+    padding: 9px;
+    gap: 6px 8px;
   }
 }

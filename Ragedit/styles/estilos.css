@@ -4029,3 +4029,13 @@ body {
   background: #e8ebef;
   color: #3d434d;
 }
+
+.equipo-avatar {
+  overflow: hidden;
+}
+
+.equipo-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -9,11 +9,18 @@ switch ($accion) {
     case 'listar':
         $lista = [];
         foreach ($equipo as $numero => $integrante) {
+            // La foto es opcional: si el archivo no existe se manda vacia y la pagina muestra la inicial
+            $foto = '';
+            if ($integrante['foto'] !== '' && is_file(CARPETA_IMAGENES . 'equipo/' . basename($integrante['foto']))) {
+                $foto = basename($integrante['foto']);
+            }
+
             $lista[] = [
                 'id'      => (int)$numero,
                 'nombre'  => $integrante['nombre'],
                 'rol'     => $integrante['rol'],
                 'resumen' => $integrante['resumen'],
+                'foto'    => $foto,
             ];
         }
         responder(['equipo' => $lista]);

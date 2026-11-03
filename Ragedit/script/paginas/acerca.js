@@ -1,5 +1,3 @@
-
-
 var listaEquipo = document.getElementById("lista-equipo");
 
 llamarApi("equipo.php", { accion: "listar" }, function (respuesta) {
@@ -12,10 +10,17 @@ llamarApi("equipo.php", { accion: "listar" }, function (respuesta) {
   for (var i = 0; i < respuesta.equipo.length; i++) {
     var integrante = respuesta.equipo[i];
 
+    var avatar = '<span class="equipo-avatar" aria-hidden="true">' + escaparHtml(integrante.nombre.charAt(0).toUpperCase()) + "</span>";
+
+  
+    if (integrante.foto != "") {
+      avatar = '<span class="equipo-avatar" aria-hidden="true"><img src="' + CARPETA_IMAGENES + "equipo/" + encodeURIComponent(integrante.foto) + '" alt=""></span>';
+    }
+
     var li = document.createElement("li");
     li.className = "equipo-integrante";
     li.innerHTML =
-      '<span class="equipo-avatar" aria-hidden="true">' + escaparHtml(integrante.nombre.charAt(0).toUpperCase()) + "</span>" +
+      avatar +
       "<div>" +
         '<a class="equipo-nombre" href="integrante.html?id=' + integrante.id + '">' + escaparHtml(integrante.nombre) + "</a>" +
         '<span class="equipo-rol">' + escaparHtml(integrante.rol) + "</span>" +

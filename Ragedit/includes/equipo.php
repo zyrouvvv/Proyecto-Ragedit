@@ -4,11 +4,11 @@ return [
     1 => [
         'nombre'    => 'Fabian Diaz',
         'rol'       => 'SCRUM Master',
-        'resumen'   => 'Base de datos, sesiones y roles de usuario.',
-        'sobre_mi'  => "",
-        'intereses' => ['PHP y MySQL', ''],
-        'foto'      => '',
-        'enlaces'   => ['GitHub' => '', 'LinkedIn' => ''],
+        'resumen'   => 'Facilitador de equipos ágiles enfocado en la mejora continua y la entrega de valor, con sólida base técnica en desarrollo web full-stack (PHP, JavaScript, HTML, CSS y bases de datos relacionales).',
+        'sobre_mi'  => "Estudiante técnico apasionado por la tecnología, el desarrollo de software y la gestión de proyectos bajo metodologías ágiles. Combino habilidades de organización y liderazgo de equipos con competencias técnicas en maquetación, programación web y modelado de bases de datos.",
+        'intereses' => ['JavaScript y MySQL', 'Desarrollo Backendy Frontend', 'Optimización de base de datos.'],
+        'foto'      => '../img/Fabian.jpg',
+        'enlaces'   => ['GitHub' => 'https://github.com/zyrouvvv', 'LinkedIn' => 'https://www.linkedin.com/in/fabian-diaz-34029a408/'],
     ],
     2 => [
         'nombre'    => 'Virginia Videla',
@@ -43,7 +43,7 @@ return [
         'resumen'   => 'javascript,html y php.',
         'sobre_mi'  => "soy un programador en proceso",
         'intereses' => ['Diseño visual', 'Juegos de aventura'],
-        'foto'      => '',
+        'foto'      => '../img/sebasfoto.png',
         'enlaces'   => ['GitHub' => '', 'LinkedIn' => ''],
     ],
 ];
